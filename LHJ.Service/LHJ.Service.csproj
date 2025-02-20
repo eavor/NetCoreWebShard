@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LHJ.IService\LHJ.IService.csproj" />
+    <ProjectReference Include="..\LHJ.Repository\LHJ.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

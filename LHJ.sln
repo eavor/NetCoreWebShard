@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FB523BD6-F269-4B4C-A326-293F1C681406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.WebHost", "LHJ.WebHost\LHJ.WebHost.csproj", "{A669677F-DD23-49A5-B0FA-EC360B56081B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.Repository", "LHJ.Repository\LHJ.Repository.csproj", "{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.IRepository", "LHJ.IRepositry\LHJ.IRepository.csproj", "{7EBCEAD6-3F3E-489A-93D8-3510443981C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.IService", "LHJ.IService\LHJ.IService.csproj", "{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.Service", "LHJ.Service\LHJ.Service.csproj", "{45A61319-B408-4220-B80A-6DABB0353EA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.SqlSugarCore", "LHJ.Model\LHJ.SqlSugarCore.csproj", "{39187AFD-9280-4D64-83D3-E57482F3E543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{564E97B7-1A05-4AE6-BD08-27C0343723F9}"
+	ProjectSection(SolutionItems) = preProject
+		Init.sql = Init.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A669677F-DD23-49A5-B0FA-EC360B56081B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A669677F-DD23-49A5-B0FA-EC360B56081B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A669677F-DD23-49A5-B0FA-EC360B56081B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A669677F-DD23-49A5-B0FA-EC360B56081B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBCEAD6-3F3E-489A-93D8-3510443981C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBCEAD6-3F3E-489A-93D8-3510443981C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBCEAD6-3F3E-489A-93D8-3510443981C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBCEAD6-3F3E-489A-93D8-3510443981C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A61319-B408-4220-B80A-6DABB0353EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A61319-B408-4220-B80A-6DABB0353EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A61319-B408-4220-B80A-6DABB0353EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A61319-B408-4220-B80A-6DABB0353EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39187AFD-9280-4D64-83D3-E57482F3E543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39187AFD-9280-4D64-83D3-E57482F3E543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39187AFD-9280-4D64-83D3-E57482F3E543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39187AFD-9280-4D64-83D3-E57482F3E543}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A669677F-DD23-49A5-B0FA-EC360B56081B} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{3B55F6E5-D3A6-4694-BCE4-AE843B39EB56} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{7EBCEAD6-3F3E-489A-93D8-3510443981C2} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{45A61319-B408-4220-B80A-6DABB0353EA5} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{39187AFD-9280-4D64-83D3-E57482F3E543} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+	EndGlobalSection
+EndGlobal

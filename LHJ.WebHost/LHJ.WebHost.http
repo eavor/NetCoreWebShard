@@ -1,0 +1,6 @@
+@LHJ.WebHost_HostAddress = http://localhost:5062
+
+GET {{LHJ.WebHost_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
