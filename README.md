@@ -1,3 +1,5 @@
+仓储内容：.net 9 web api使用SqlSugar搭建仓储模式+Autofac依赖注入
+
 #####使用说明######
 
 打开解决方案,确保你你的visual studio支持.net 9,配置你自己的数据库连接字符串,最后将db文件夹下面的init.sql文件在你的数据库中运行
@@ -5,6 +7,8 @@
 
 ##################
 
+
+Warehousing content:.net 9 web api uses SqlSugar to build warehousing mode +Autofac dependency injection
 
 #####Build specification######
 
