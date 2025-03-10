@@ -15,9 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LHJ.Application.Dto\LHJ.Application.csproj" />
     <ProjectReference Include="..\LHJ.IService\LHJ.IService.csproj" />
     <ProjectReference Include="..\LHJ.Repository\LHJ.Repository.csproj" />
     <ProjectReference Include="..\LHJ.Service\LHJ.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Uploads\" />
   </ItemGroup>
 
 </Project>

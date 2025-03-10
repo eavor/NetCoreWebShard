@@ -3,6 +3,7 @@ using Autofac.Extensions.DependencyInjection;
 using LHJ.Repository;
 using LHJ.WebHost;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using System.Text;
@@ -101,7 +102,13 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    //例如保存到网站根目录 {content root}/Files下面,可以用Path.Combine方法拼接路径
+    FileProvider = new PhysicalFileProvider(Path.Combine(app.Environment.ContentRootPath, "Uploads")),
+    RequestPath = "/uploads"  //配置请求路径
+});
+
 
 app.MapControllers();
 
