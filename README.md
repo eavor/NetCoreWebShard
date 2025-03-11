@@ -1,4 +1,4 @@
-仓储内容：.net 9 web api使用SqlSugar搭建仓储模式+Autofac依赖注入
+仓储内容：.net 9 web api使用SqlSugar搭建仓储模式+Autofac依赖注入以及Scalar接口管理
 
 #####使用说明######
 
@@ -8,7 +8,7 @@
 ##################
 
 
-Warehousing content:.net 9 web api uses SqlSugar to build warehousing mode +Autofac dependency injection
+Warehousing content:.net 9 web api uses SqlSugar to build warehousing mode +Autofac dependency injection and Scalar interface management
 
 #####Build specification######
 

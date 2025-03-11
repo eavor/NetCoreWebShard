@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{564E97B7-1A05-
 		Init.sql = Init.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHJ.Application", "LHJ.Application.Dto\LHJ.Application.csproj", "{F2A17611-DC1B-45F2-91FE-F080B128B594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{39187AFD-9280-4D64-83D3-E57482F3E543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39187AFD-9280-4D64-83D3-E57482F3E543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39187AFD-9280-4D64-83D3-E57482F3E543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2A17611-DC1B-45F2-91FE-F080B128B594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A17611-DC1B-45F2-91FE-F080B128B594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A17611-DC1B-45F2-91FE-F080B128B594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A17611-DC1B-45F2-91FE-F080B128B594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,5 +69,9 @@ Global
 		{C4E0B34C-97AE-4A67-80F6-4C2ED2F4D6B4} = {FB523BD6-F269-4B4C-A326-293F1C681406}
 		{45A61319-B408-4220-B80A-6DABB0353EA5} = {FB523BD6-F269-4B4C-A326-293F1C681406}
 		{39187AFD-9280-4D64-83D3-E57482F3E543} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+		{F2A17611-DC1B-45F2-91FE-F080B128B594} = {FB523BD6-F269-4B4C-A326-293F1C681406}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C589B6A6-5305-4469-AEDE-375F2EC8523D}
 	EndGlobalSection
 EndGlobal

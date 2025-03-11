@@ -3,6 +3,7 @@ using Autofac.Extensions.DependencyInjection;
 using LHJ.Repository;
 using LHJ.WebHost;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using System.Text;
@@ -91,11 +92,14 @@ BaseDBConfig.ConnectionString = builder.Configuration.GetSection("AppSetting:Con
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapScalarApiReference(); // scalar/v1
-    app.MapOpenApi();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.MapScalarApiReference(); // scalar/v1
+//    app.MapOpenApi();
+//}
+
+app.MapScalarApiReference(); // scalar/v1
+app.MapOpenApi();
 
 app.UseAuthentication();
 
