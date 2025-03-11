@@ -5,6 +5,7 @@ using LHJ.Application.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using LHJ.IService.IServices;
 
 namespace LHJ.WebHost.Controllers;
 
@@ -13,6 +14,10 @@ namespace LHJ.WebHost.Controllers;
 [Authorize]
 public class HuHuController : ControllerBase
 {
+    private readonly IHuHuLogService HuHuLogService;
+
+    public HuHuController(IHuHuLogService huHuLogService) { this.HuHuLogService = huHuLogService; }
+
     [Tags("获取指定图标位置")]
     [HttpPost("UploadImages")]
     public async Task<IActionResult> UploadTwoImages(IFormFile msterImage, IFormFile templateImage)
@@ -22,11 +27,9 @@ public class HuHuController : ControllerBase
         {
             Directory.CreateDirectory(CommonStatic.UploadFolder);
         }
-        // 保存第一张图片
-        var filePath1 = await SaveFile(msterImage);
+        string filePath1 = await SaveFile(msterImage);
 
-        // 保存第一张图片
-        var filePath12 = await SaveFile(templateImage);
+        string filePath12 = await SaveFile(templateImage);
 
         Mat _mainImage = CvInvoke.Imread(filePath1, ImreadModes.Color);
 
@@ -42,6 +45,12 @@ public class HuHuController : ControllerBase
         System.Drawing.Point maxLoc = new System.Drawing.Point();
         CvInvoke.MinMaxLoc(result, ref minVal, ref maxVal, ref minLoc, ref maxLoc);
 
+        await HuHuLogService.Add(new SqlSugarCore.Entities.HuHuLog()
+        {
+            CreateDate = DateTime.Now,
+            Desc = $"【模板图片的位置：({maxLoc.X}, {maxLoc.Y})】_主图片路径【{filePath1}】_模板路径【{filePath12}】",
+        });
+
         // 返回文件路径或成功消息
         return Ok(new
         {
@@ -49,14 +58,6 @@ public class HuHuController : ControllerBase
             Message = "两张图片上传成功。"
         });
     }
-
-    // 检查文件扩展名是否允许
-    private bool IsFileAllowed(IFormFile file)
-    {
-        var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
-        return !string.IsNullOrEmpty(fileExtension) && CommonStatic.AllowedExtensions.Contains(fileExtension);
-    }
-
     // 保存文件到服务器
     private async Task<string> SaveFile(IFormFile file)
     {

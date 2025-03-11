@@ -92,23 +92,18 @@ BaseDBConfig.ConnectionString = builder.Configuration.GetSection("AppSetting:Con
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapScalarApiReference(); // scalar/v1
-    app.MapOpenApi();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.MapScalarApiReference(); // scalar/v1
+//    app.MapOpenApi();
+//}
+
+app.MapScalarApiReference(); // scalar/v1
+app.MapOpenApi();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    //例如保存到网站根目录 {content root}/Files下面,可以用Path.Combine方法拼接路径
-    FileProvider = new PhysicalFileProvider(Path.Combine(app.Environment.ContentRootPath, "Uploads")),
-    RequestPath = "/uploads"  //配置请求路径
-});
-
 
 app.MapControllers();
 
